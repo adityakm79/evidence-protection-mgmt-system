@@ -1,0 +1,103 @@
+.pic {
+   background-size: cover;
+}
+
+.head {
+   background: #20746a;
+   color: white;
+}
+
+
+#bg {
+   background-size: 1800px 900px;
+   background-repeat: no-repeat;
+   background-position: top;
+   background-attachment: fixed;
+}
+
+.a {
+   color: white;
+   transition: all 1sec;
+   text-decoration: none;
+}
+
+.a:hover {
+   color: red;
+   transition: all 1sec;
+}
+
+.margintopleft {
+   margin-top: 100px;
+   margin-left: 100px;
+}
+.welcome {
+   margin-top: 250px;
+   margin-left: 500px;
+   
+}
+
+.msgcolor {
+   background-color: #319b17;
+   color: white;
+   display: inline-block;
+   padding: 5px 10px;
+}
+
+.fontcolor {
+   color: white;
+}
+
+.bg_about{
+   background-color: #000000d4;
+   font-size: larger;
+   color:white;
+   padding: 5px 10px;
+   margin-top: 100px;
+   margin-left: 100px;
+}
+
+.about{
+   background-color: #000000d4;
+   color:white;
+   border-style: solid;
+  border-color: black;
+
+}
+
+.center{
+   background-color: #fffafae3;
+   border: 2px solid black;
+   border-collapse:collapse;
+   font-size: 25px;
+   text-align: center;
+   width: 500px;
+}
+
+.check {
+   margin-top: 30px;
+}
+
+.forgetPassword{
+   background-color:#dc3545;
+   color:white;
+   padding: 10px;
+   margin-left: 30px;
+   border-radius: 5px;
+   font-size: 20px;
+}
+
+.forgetPassword:hover{
+   color:rgb(10, 18, 245);
+}
+
+
+.eye{
+   position: absolute;
+   right: 10px;
+   top: 5px;
+   cursor: pointer;
+}
+
+.eye-position{
+   position: relative
+}

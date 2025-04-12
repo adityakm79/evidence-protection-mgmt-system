@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+ {% include "link.html" %}
+</head>
+
+<body id="bg" class="bg_image">
+
+   {% include "_header.html"%}
+
+   <div class="row">
+
+      <div class="col-sm-7">
+
+      </div>
+      <div class="col-sm-4 margintopleft">
+
+         <form method="post" action="">
+            {% csrf_token %}
+
+            {% if msg != '' %}
+            <label class="form-label fs-6 msgcolor">{{msg}}</label>
+            {% endif %}
+
+            <div class="mb-3">
+               <select name="department_id" class="form-control" autocomplete="additional-name" required>
+                  <option value="">Select Department Name</option>
+                  {% for n in department %}
+                  <option value="{{n.department_id}}">{{n.department_name}}</option>
+                  {% endfor %}
+               </select>
+               <label class="form-label fs-5 fontcolor">User Name</label>
+               <input type="text" class="form-control " placeholder="Department Username" name="name" required
+                  autocomplete="off">
+               <label class="form-label fs-5 fontcolor">Email</label>
+               <input type="email" class="form-control " placeholder="Email" name="email" required>
+               <label class="form-label fs-5 fontcolor">Password</label>
+               <input type="password" class="form-control" placeholder="Password" name="password" required>
+
+               <label class="form-label fs-5 fontcolor">Mobile Number</label>
+               <input type="number" class="form-control " placeholder="Number" name="number" required>
+
+
+               <button type="submit" class="btn btn-danger mt-2 fs-4">Add User</button>
+
+            </div>
+         </form>
+      </div>
+      <div class="col-sm-1">
+
+      </div>
+
+   </div>
+
+</body>
+
+</html>

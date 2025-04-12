@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    {% include "link.html" %}
+  </head>
+
+  <body id="bg" class="bg_image">
+    {% include "_header.html"%}
+
+    <div class="row">
+      <div class="col-sm-5"></div>
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-4 margintopleft">
+        <form method="post" action="">
+          {% csrf_token %} {% if msg != '' %}
+          <label class="form-label fs-6 msgcolor">{{msg}}</label>
+          {% endif %}
+          <div class="mb-3">
+            <select
+              name="department_id"
+              class="form-control"
+              autocomplete="additional-name"
+              required
+            >
+              <option value="">Select Department Name</option>
+              {% for n in department %}
+              <option value="{{n.department_id}}">{{n.department_name}}</option>
+              {% endfor %}
+            </select>
+            <label class="form-label fs-5" style="color: white">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Department User-email"
+              name="email"
+              autocomplete="off"
+              required
+            />
+            <label class="form-label fs-5" style="color: white">Password</label>
+            <div class="eye-position">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                name="password"
+                id="password"
+                value=""
+                autocomplete="off"
+                required
+              />
+              <span
+                onclick="togglePassword('password', this)"
+                class="eye"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </span>
+            </div>
+
+            <button type="submit" class="btn btn-danger mt-2 fs-4 m-3">
+              Login
+            </button>
+            <a href="forgot_password" class="forgetPassword">Forgot Password</a>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

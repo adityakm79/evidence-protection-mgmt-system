@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    {% include "link.html" %}
+  </head>
+
+  <body id="bg" class="bg_image">
+    {% include "header.html"%}
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 check">
+        <table>
+          <tr>
+            <th class="center">Send To</th>
+            <th class="center">Department Name</th>
+            <th class="center">File Name</th>
+            <th class="center">Date</th>
+          </tr>
+          {% for i in information %}
+          <tr>
+            <td class="center">{{i.name}}</td>
+            <td class="center">{{i.department_name}}</td>
+            <td class="center">{{i.uploaded_filename}}</td>
+            <td class="center">{{i.created_at|date:"Y-m-d h:i:s"}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </body>
+</html>

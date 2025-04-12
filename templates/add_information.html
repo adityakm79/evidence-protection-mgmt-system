@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+   {% include "link.html"%}
+</head>
+
+<body id="bg" class="bg_image">
+   {% include "header.html"%}
+
+   <div class="row">
+      <div class="col-sm-7">
+      </div>
+      <div class="col-sm-4 margintopleft ">
+
+         <div class="mb-3">
+            <form method="post" action="" enctype="multipart/form-data">
+               {% csrf_token %}
+               {% if msg != '' %}
+               <label class="form-label fs-6 msgcolor">{{msg}}</label>
+               {% endif %}
+               <br>
+               <label class="form-label fs-5 mt-3 fontcolor">Select Department</label>
+               <select name="department_id" class="form-control" autocomplete="additional-name" required>
+                  <option value="">Select Department Name</option>
+                  {% for n in department %}
+                  <option value="{{n.department_id}}">{{n.department_name}}</option>
+                  {% endfor %}
+               </select>
+               <br>
+               <label class="form-label fs-5 mt-2 fontcolor">User Email</label>
+               <input type="email" name="email" class="form-control" placeholder="User Email" autocomplete="off"
+                  required>
+               <br>
+               <label class="form-label fs-5 mt-2 fontcolor">Upload</label>
+               <input type="file" name="upload" class="form-control">
+               <button type="submit" class="btn btn-danger mt-2 fs-4">Add Evidence</button>
+            </form>
+         </div>
+      </div>
+      <div class="col-sm-3">
+      </div>
+   </div>
+
+</body>
+
+</html>
