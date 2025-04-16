@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-#ff(@6h=%67_fd!aedvg3+*4jc43goo)ub2(qf@#-1bn@mr-p&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,11 +78,17 @@ WSGI_APPLICATION = "EvidenceProtectionManagementSystem.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "bbepms",
-        "USER": "root",
-        "PASSWORD": "",
-        "HOST": "localhost",
-        "PORT": "3306",
+        # "NAME": "bbepms",
+        # "USER": "root",
+        # "PASSWORD": "",
+        # "HOST": "localhost",
+        # "PORT": "3306",
+        
+        'NAME': 'bbepms',
+        'USER': 'root',
+        'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
+        'HOST': 'shinkansen.proxy.rlwy.net',
+        'PORT': '28671',
     }
 }
 
