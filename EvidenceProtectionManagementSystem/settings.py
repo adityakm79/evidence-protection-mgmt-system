@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+# import pymysql
+
+# pymysql.install_as_MySQLdb()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = BASE_DIR / "templates"
@@ -77,18 +82,18 @@ WSGI_APPLICATION = "EvidenceProtectionManagementSystem.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        # "NAME": "bbepms",
-        # "USER": "root",
-        # "PASSWORD": "",
-        # "HOST": "localhost",
-        # "PORT": "3306",
+        # "ENGINE": "django.db.backends.mysql",
+        # # "NAME": "bbepms",
+        # # "USER": "root",
+        # # "PASSWORD": "",
+        # # "HOST": "localhost",
+        # # "PORT": "3306",
         
-        'NAME': 'bbepms',
-        'USER': 'root',
-        'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
-        'HOST': 'shinkansen.proxy.rlwy.net',
-        'PORT': '28671',
+        # 'NAME': 'bbepms',
+        # 'USER': 'root',
+        # 'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
+        # 'HOST': 'shinkansen.proxy.rlwy.net',
+        # 'PORT': '28671',
     }
 }
 
