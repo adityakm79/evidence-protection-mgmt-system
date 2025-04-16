@@ -1,5 +1,5 @@
 Django==5.0.6
 PyMySQL==1.1.1
 sendgrid==6.11.0
-gunicorn
-whitenoise
+gunicorn==23.0.0
+whitenoise==6.9.0
