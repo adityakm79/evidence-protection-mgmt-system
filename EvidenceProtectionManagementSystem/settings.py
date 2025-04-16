@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 
 import pymysql
+import os
 
 pymysql.install_as_MySQLdb()
 
@@ -89,11 +90,19 @@ DATABASES = {
         # # "HOST": "localhost",
         # # "PORT": "3306",
         
-        'NAME': 'bbepms',
-        'USER': 'root',
-        'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
-        'HOST': 'shinkansen.proxy.rlwy.net',
-        'PORT': '28671',
+        # 'NAME': 'bbepms',
+        # 'USER': 'root',
+        # 'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
+        # 'HOST': 'shinkansen.proxy.rlwy.net',
+        # 'PORT': '28671',
+        
+        'ENGINE': 'django.db.backends.mysql',  # <-- THIS is the key part that's missing
+        'NAME': os.getenv('MYSQLDATABASE', 'bbepms'),
+        'USER': os.getenv('MYSQLUSER', 'root'),
+        'PASSWORD': os.getenv('MYSQLPASSWORD', 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH'),
+        'HOST': os.getenv('MYSQLHOST', 'shinkansen.proxy.rlwy.net'),
+        'PORT': os.getenv('MYSQLPORT', '28671'),
+        
     }
 }
 
