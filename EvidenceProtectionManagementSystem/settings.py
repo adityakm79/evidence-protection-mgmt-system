@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-# import pymysql
+import pymysql
 
-# pymysql.install_as_MySQLdb()
+pymysql.install_as_MySQLdb()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -89,11 +89,11 @@ DATABASES = {
         # # "HOST": "localhost",
         # # "PORT": "3306",
         
-        # 'NAME': 'bbepms',
-        # 'USER': 'root',
-        # 'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
-        # 'HOST': 'shinkansen.proxy.rlwy.net',
-        # 'PORT': '28671',
+        'NAME': 'bbepms',
+        'USER': 'root',
+        'PASSWORD': 'hQFHUUQHzUgIATnvThiouLqukWpEtkNH',
+        'HOST': 'shinkansen.proxy.rlwy.net',
+        'PORT': '28671',
     }
 }
 
